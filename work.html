@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somiya Beauty | صالون صومية للتجميل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-pink: #ff85a2;
+            --dark-pink: #f06292;
+            --gold: #d4af37;
+            --soft-white: #fff5f7;
+            --text-color: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--soft-white);
+            color: var(--text-color);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-pink);
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--primary-pink); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 25px; }
+
+        .btn {
+            background-color: var(--primary-pink);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover { background-color: var(--dark-pink); transform: scale(1.05); }
+
+        /* Services Section */
+        .services { padding: 50px 10%; text-align: center; }
+        .section-title { margin-bottom: 40px; color: var(--dark-pink); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .service-card:hover { transform: translateY(-10px); }
+        .service-card i { font-size: 2.5rem; color: var(--primary-pink); margin-bottom: 15px; }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        .social-icons { margin: 20px 0; }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover { color: var(--primary-pink); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🌸 Somiya Beauty</div>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#contact">اتصلي بنا</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>صالون صومية للتجميل</h1>
+        <p>الأناقة، الجودة، والجمال في مكان واحد</p>
+        <a href="#contact" class="btn">احجزي موعدك الآن</a>
+    </header>
+
+    <section id="services" class="services">
+        <h2 class="section-title">خدماتنا المتميزة</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-cut"></i>
+                <h3>قص وتصفيف</h3>
+                <p>أحدث القصات والصبغات العالمية بأيدي خبراء.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-magic"></i>
+                <h3>مكياج احترافي</h3>
+                <p>إطلالة ساحرة لكل مناسباتك وأفراحك.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-spa"></i>
+                <h3>عناية بالبشرة</h3>
+                <p>جلسات تنظيف وترطيب لأقصى درجات النضارة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hand-sparkles"></i>
+                <h3>أظافر ومانيكير</h3>
+                <p>لمسة فنية لأظافرك تدوم طويلاً.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3>تابعينا على مواقع التواصل</h3>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>📍 تونس، نهج الورود - هاتف: 22.999.888</p>
+        <p>© 2026 Somiya Beauty Salon. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
